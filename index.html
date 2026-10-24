@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fatjeta Nerguti | Junior Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Fatjeta Nerguti, Junior Full-Stack Developer in Tirana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2a2038;--mut:#756a86;--v:#5d3a8e;--btn:#b794f6;--lav:#f3edfd;--pink:#fde8f1;--r:26px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:15px/1.7 Inter,system-ui,sans-serif;color:var(--ink);background:linear-gradient(135deg,#f6f1ff,#fff 45%,#fde8f1) fixed}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.05}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--v);outline-offset:2px}
+.w{width:min(1100px,90vw);margin:0 auto}
+.vi{color:var(--v)}
+header{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+.logo{font:500 1.9rem 'Cormorant Garamond',serif;text-decoration:none}
+nav{display:flex;align-items:center;gap:26px;font-size:14px}
+nav a{text-decoration:none}nav a:hover{color:var(--v)}
+.pill{background:#fff;padding:12px 22px;border-radius:99px;box-shadow:0 4px 20px rgba(93,58,142,.1)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:5vw;align-items:center;padding:4vh 0 6vh}
+.eyebrow,.eb{font-size:11.5px;letter-spacing:.06em;color:var(--v);text-transform:uppercase}
+.eyebrow::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--v);margin-right:8px}
+.hero h1{font-size:clamp(3.2rem,8vw,6.4rem);margin:18px 0 22px;letter-spacing:-.02em}
+.role{font-weight:500}.lead{color:var(--mut);max-width:430px;margin:6px 0 26px}
+.btns{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.btn,button{font:inherit;font-weight:500;border:0;border-radius:99px;padding:14px 30px;background:var(--btn);color:#fff;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover,button:hover{background:var(--v)}
+.lnk{font-size:14px;text-decoration:none}.lnk:hover{color:var(--v)}
+figure{position:relative}
+.arch{aspect-ratio:1/1.1;border-radius:46% 46% 26px 26px/30% 30% 26px 26px;overflow:hidden;background:linear-gradient(160deg,#e3d4ff,#fbd5e6);display:grid;place-items:center;font:500 7rem 'Cormorant Garamond',serif;color:var(--v)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;right:-12px;bottom:56px;background:#fff;padding:12px 20px;border-radius:14px;font:italic 1.25rem 'Cormorant Garamond',serif;transform:rotate(-3deg);box-shadow:0 8px 24px rgba(93,58,142,.18)}
+figcaption{display:flex;justify-content:space-between;margin-top:14px;font-size:11px;letter-spacing:.05em;color:var(--mut);text-transform:uppercase}
+figcaption i{font:italic 1.2rem 'Cormorant Garamond',serif;color:var(--v);text-transform:none;letter-spacing:0}
+.strip{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:22px 0;border-top:1px solid #eadff7;font-size:13.5px}
+.strip span::before{content:"✳";color:var(--v);margin-right:12px}
+.sec{padding:80px 0 0}
+.sh{margin-bottom:34px}
+.sh h2{font-size:clamp(2.4rem,5.5vw,4rem);margin-top:8px}
+.two{display:grid;grid-template-columns:.9fr 1.1fr;gap:5vw;align-items:center}
+.win{background:#fff;border-radius:var(--r);padding:20px;box-shadow:0 10px 40px rgba(93,58,142,.12);aspect-ratio:1/.95;display:flex;flex-direction:column;gap:12px}
+.win .d{display:flex;gap:6px;margin-bottom:8px}.win .d i{width:11px;height:11px;border-radius:50%;background:#e3d4ff}
+.win .b{height:16px;border-radius:8px;background:linear-gradient(90deg,#e3d4ff,#fbd5e6)}
+.cap{font-size:11px;letter-spacing:.05em;color:var(--mut);text-transform:uppercase;margin-top:12px}
+.txt p{color:var(--mut);margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.chip{background:var(--lav);color:var(--v);padding:6px 14px;border-radius:99px;font-size:13px}
+.stats{display:flex;justify-content:space-between;gap:14px;border-top:1px solid #eadff7;padding-top:18px}
+.stats b{display:block;font:400 2.6rem 'Cormorant Garamond',serif;line-height:1}
+.stats span{font-size:11px;letter-spacing:.05em;color:var(--mut);text-transform:uppercase}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px 36px}
+.pgrid>:nth-child(even){margin-top:50px}
+.pv{position:relative;aspect-ratio:1.25;border-radius:var(--r);display:grid;place-items:center;font:400 6rem 'Cormorant Garamond',serif;color:rgba(93,58,142,.55)}
+.arr{position:absolute;right:16px;bottom:16px;width:42px;height:42px;border-radius:50%;background:#fff;display:grid;place-items:center;text-decoration:none;color:var(--v)}
+.arr:hover{background:var(--btn);color:#fff}
+.pm{display:flex;justify-content:space-between;margin-top:14px;font-size:11px;letter-spacing:.05em;color:var(--v);text-transform:uppercase}
+.pcard h3{font-size:2rem;margin:4px 0}.pcard p.d{color:var(--mut);font-size:14px}
+.band{background:var(--lav);padding:80px 0;margin-top:80px}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:#fff;border-radius:var(--r);padding:28px;box-shadow:0 6px 30px rgba(93,58,142,.07)}
+.card .n{float:right;font:italic 1.1rem 'Cormorant Garamond',serif;color:var(--mut)}
+.card h3{font-size:1.9rem;margin:34px 0 8px}.card p{color:var(--mut);font-size:14px}
+.card ul{list-style:none;margin-top:16px;padding:0;font-size:12.5px;color:var(--v)}.card li{padding:3px 0}
+.jgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.it{padding:14px 0;border-top:1px solid #eadff7}.it:first-of-type{border-top:0}
+.it b{font-weight:500}.it small{display:block;color:var(--v);font-size:12.5px}.it p{margin-top:4px}
+.contact{background:linear-gradient(#f1eafc,#fde8f1);padding:80px 0;margin-top:80px}
+.mail{display:inline-block;font:400 1.9rem 'Cormorant Garamond',serif;margin:10px 0 18px}
+.soc{display:flex;gap:20px;flex-wrap:wrap;font-size:13px}.soc a{text-decoration:none}.soc a:hover{color:var(--v)}
+form{background:rgba(255,255,255,.75);border-radius:var(--r);padding:30px;box-shadow:0 10px 40px rgba(93,58,142,.1)}
+form h3{font-size:1.7rem;margin-bottom:6px}
+label{display:block;font-size:12.5px;font-weight:500;margin:14px 0 5px}
+input,textarea,select{width:100%;font:inherit;padding:11px 14px;border:1px solid #e3d9f3;border-radius:12px;background:#fff;color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+.small{font-size:12px;color:var(--mut);margin-top:12px}
+footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:28px 0 36px;font-size:12.5px;color:var(--mut)}
+footer button{background:none;color:var(--mut);padding:4px 8px;font-size:12.5px}footer button:hover{background:none;color:var(--v)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.edit{background:var(--v);padding:6px 16px;font-size:12.5px}.edit:hover{background:var(--btn)}
+dialog{border:0;border-radius:var(--r);padding:26px;width:min(560px,92vw);box-shadow:0 20px 60px rgba(42,32,56,.4)}
+dialog::backdrop{background:rgba(42,32,56,.55)}
+dialog h3{font-size:1.8rem;margin-bottom:6px}
+dialog textarea{min-height:240px}
+button.alt{background:var(--lav);color:var(--v)}button.alt:hover{background:#e3d4ff}
+.hint,.msg{font-size:12.5px;color:var(--mut)}.msg{min-height:1.4em;margin-top:8px;color:#b3261e}
+.row{display:flex;gap:10px;justify-content:flex-end;margin-top:14px}
+@media(max-width:860px){nav a:not(.pill){display:none}.hero,.two,.jgrid,.pgrid{grid-template-columns:1fr}.pgrid>:nth-child(even){margin-top:0}.tag{right:8px}.stats{flex-wrap:wrap}}
+
+.card{padding:34px}.win{padding:26px}form{padding:36px}.sgrid,.jgrid{gap:28px}.it{padding:16px 0}
+.plist{display:grid;gap:28px}
+.pcard{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center;background:#fff;border-radius:var(--r);padding:24px;box-shadow:0 6px 30px rgba(93,58,142,.08)}
+.pcard:nth-child(even) .pv{order:2}
+.pv{aspect-ratio:1.5;border-radius:18px;overflow:hidden;font-size:5rem}
+.pv img{width:100%;height:100%;object-fit:cover;display:block}
+.pb{padding:8px 14px}.pm{margin:0 0 8px}
+.lnk2{display:inline-block;margin-top:14px;font-weight:500;color:var(--v);text-decoration:none}.lnk2:hover{text-decoration:underline}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.cert img{width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:14px;display:block}
+.cert h3{margin:16px 0 6px;font-size:1.6rem}
+body{position:relative}
+#loginBtn{position:absolute;right:8px;bottom:8px;background:none;color:var(--mut);opacity:.25;padding:4px 12px}#loginBtn:hover{opacity:1;background:none}
+#loginBtn.on{position:fixed;right:16px;bottom:16px;opacity:1;background:var(--v);color:#fff;z-index:9;padding:9px 20px}
+.lang{background:none;border:1px solid #d9c9f5;color:var(--v);padding:6px 14px;font-size:13px}.lang:hover{background:var(--lav)}
+@media(max-width:860px){.pcard{grid-template-columns:1fr;padding:18px;gap:16px}.pcard:nth-child(even) .pv{order:0}.card{padding:26px}form{padding:26px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="w"><a class="logo" href="#top">fatjeta.</a><nav><a href="#about" data-i="nav_about"></a><a href="#projects" data-i="nav_work"></a><a href="#certificates" data-i="nav_cert"></a><a href="#services" data-i="nav_services"></a><a href="#journey" data-i="nav_journey"></a><a class="pill" href="#contact" data-i="nav_talk"></a><button id="lang" class="lang"></button></nav></header>
+<main id="app"></main>
+<footer class="w"><a class="logo" href="#top">fatjeta.</a><span id="bar"></span><a href="#top" data-i="up"></a><span style="flex-basis:100%">&copy; <span id="yr"></span> <span id="fl"></span></span></footer>
+<dialog id="dlg"></dialog>
+<button id="loginBtn" aria-label="Admin login">•</button>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js"></script>
+<script>
+/* Paste your Supabase values here. Use the Publishable key (sb_publishable_...). It is meant to be public. NEVER paste a Secret key (sb_secret_...) or service_role key here. */
+const SUPABASE_URL = 'https://irswblkuzixvygfzglkr.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_U2oHuiQ1Qk_25cAQ8IQHeA_mtE2uEZg';
+
+const DEF = {
+hero: "Clean code.\nSecure by design.\nFatjeta Nerguti, Junior Full-Stack Developer\nI build web applications with Angular, Spring Boot and ASP.NET Core, with a growing focus on security. A little logic, a little care, always with purpose.\nOpen to junior roles in Tirana or remote\nClean code, Secure by design, Details that work\n",
+about: "I am a Junior Full-Stack Developer with a B.Sc. in ICT from the University of Tirana, and I am now studying for an M.Sc. in Information Systems Engineering.\nThis summer I worked as a full-stack intern at Intermedia, building REST APIs and Angular features in a live production codebase. I am also learning cybersecurity at Coddy School Tirana.",
+stats: "4 | Projects built\n1 | Full-stack internship\n2 | Degrees, one in progress",
+skills: "Angular, Spring Boot, ASP.NET Core, Java, C#, TypeScript, SQL, Docker, Git, React",
+projects: "ApiFilma | A RESTful API with full CRUD, correct HTTP status codes and parameterized queries that prevent SQL injection. | ASP.NET Core · EF Core | 2026 | https://github.com/fatjetanerguti\nApiKonsum | An analytics dashboard using 6 REST endpoints, secured with ASP.NET Core Identity, with KPI cards and charts. | MVC · Chart.js | 2026 | https://github.com/fatjetanerguti\nEBiblioteka | A library system built in a team of 5. I built the login, register and book catalog with search and role-based access. | ASP.NET Core · SQL Server | 2026 | https://github.com/fatjetanerguti\nPortfolio | A full-stack portfolio with a secure admin panel, containerized with Docker and deployed online. | ASP.NET Core · Docker | 2026 | https://github.com/fatjetanerguti",
+services: "Backend & APIs | Clean, well-tested REST APIs that do what they promise. | Spring Boot and ASP.NET Core; Entity Framework Core and SQL; Authentication and roles\nFrontend | Interfaces that are clear, responsive and pleasant to use. | Angular and React; Responsive layouts; Reusable components\nSecurity basics | Habits that keep applications safe from the start. | Parameterized queries; Role-based access control; Learning ethical hacking",
+experience: "Full-Stack Developer Intern | Intermedia | Jul 2026 – Sep 2026 | Built Angular components and Spring Boot REST APIs in a live production codebase, with code reviews in an agile team.\nCustomer Service Specialist | Mulliri i Vjetër | Jun 2025 – Feb 2026 | Served customers, registered orders and handled payments.\nCustomer Service Representative | Laguna | Jul 2024 – Jan 2025 | Resolved complaints and requests by phone and in person.",
+education: "M.Sc. Information Systems Engineering | University of Tirana | Oct 2026 – 2028 (expected)\nB.Sc. Information & Communication Technology | University of Tirana | Oct 2023 – Jun 2026",
+certs: "Front-End Programming Academy | Brainster | Apr 2025\nCyber Security Course | Coddy School Tirana | In progress, Oct 2026 – Feb 2027",
+titles: "about | 01 / A little about me | A curious mind. | A careful builder.\nprojects | 02 / Selected work | Ideas, | carefully built.\nservices | 03 / What I do | Your idea. | My careful craft.\ncertificates | 04 / Certificates | Proof that I | keep learning.\njourney | 05 / My journey | Learning by | building.\ncontact | 06 / Let's talk | A good feeling starts with | hello.",
+misc: "Based in Tirana · Coding everywhere\nHello!\n✦ Made with care\nHave a role, a project or a question? Tell me a little about it. I would love to hear from you.\nFatjeta Nerguti. Built with care in Tirana.",
+hero_sq: "Kod i pastër.\nI sigurt nga dizajni.\nFatjeta Nerguti, Zhvilluese Junior Full-Stack\nNdërtoj aplikacione web me Angular, Spring Boot dhe ASP.NET Core, me fokus gjithnjë e më të madh te siguria. Pak logjikë, pak kujdes, gjithmonë me qëllim.\nE hapur për pozicione junior në Tiranë ose në distancë\nKod i pastër, Siguri që në fillim, Detaje që funksionojnë\n",
+about_sq: "Jam zhvilluese Junior Full-Stack me diplomë Bachelor në Teknologji të Informacionit dhe Komunikimit nga Universiteti i Tiranës, dhe tani po studioj Master Shkencor në Inxhinieri të Sistemeve të Informacionit.\nKëtë verë punova si praktikante full-stack në Intermedia, ku ndërtova REST API dhe funksione Angular në një kod real në prodhim. Po mësoj edhe sigurinë kibernetike në Coddy School Tirana.",
+stats_sq: "4 | Projekte të ndërtuara\n1 | Praktikë full-stack\n2 | Diploma, njëra në vazhdim",
+projects_sq: "ApiFilma | Një API RESTful me CRUD të plotë, kode të sakta HTTP dhe pyetje të parametrizuara që parandalojnë SQL injection. | ASP.NET Core · EF Core | 2026\nApiKonsum | Një panel analizash që përdor 6 endpoint REST, i siguruar me ASP.NET Core Identity, me karta KPI dhe grafikë. | MVC · Chart.js | 2026\nEBiblioteka | Një sistem biblioteke i ndërtuar në ekip prej 5 vetash. Ndërtova hyrjen, regjistrimin dhe katalogun e librave me kërkim dhe akses sipas roleve. | ASP.NET Core · SQL Server | 2026\nPortfolio | Një portfolio full-stack me panel admini të sigurt, e paketuar me Docker dhe e publikuar online. | ASP.NET Core · Docker | 2026",
+services_sq: "API dhe backend | API REST të pastra dhe të testuara, që bëjnë pikërisht atë që premtojnë. | Spring Boot dhe ASP.NET Core API; Entity Framework Core dhe SQL; Autentikim dhe role\nFrontend | Ndërfaqe të qarta, responsive dhe të këndshme për t'u përdorur. | Angular dhe React; Faqe responsive; Komponentë të ripërdorshëm\nBazat e sigurisë | Zakone që e mbajnë aplikacionin të sigurt që nga fillimi. | Pyetje të parametrizuara; Kontroll aksesi sipas roleve; Po mësoj ethical hacking",
+experience_sq: "Praktikant Full-Stack Developer | Intermedia | Korr 2026 – Sht 2026 | Ndërtova komponentë Angular dhe REST API me Spring Boot në një kod real në prodhim, me code review në një ekip agile.\nSpecialiste e shërbimit ndaj klientit | Mulliri i Vjetër | Qer 2025 – Shk 2026 | Shërbeva klientët, regjistrova porositë dhe përpunova pagesat.\nPërfaqësuese e shërbimit ndaj klientit | Laguna | Korr 2024 – Jan 2025 | Zgjidha ankesa dhe kërkesa me telefon dhe ballë për ballë.",
+education_sq: "Master Shkencor në Inxhinieri të Sistemeve të Informacionit | Universiteti i Tiranës | Tet 2026 – 2028 (i pritshëm)\nBachelor në Teknologji të Informacionit dhe Komunikimit | Universiteti i Tiranës | Tet 2023 – Qer 2026",
+certs_sq: "Akademia e Programimit Front-End | Brainster | Pri 2025\nKursi i Sigurisë Kibernetike | Coddy School Tirana | Në vazhdim, Tet 2026 – Shk 2027",
+titles_sq: "about | 01 / Pak për mua | Një mendje kureshtare. | Një ndërtuese e kujdesshme.\nprojects | 02 / Punë të zgjedhura | Ide, | të ndërtuara me kujdes.\nservices | 03 / Çfarë bëj | Ideja jote. | Zanati im i kujdesshëm.\ncertificates | 04 / Certifikata | Dëshmi se | vazhdoj të mësoj.\njourney | 05 / Rrugëtimi im | Mësoj duke | ndërtuar.\ncontact | 06 / Të flasim | Një ndjesi e mirë nis me | një përshëndetje.",
+misc_sq: "Me bazë në Tiranë · Programoj kudo\nPërshëndetje!\n✦ Bërë me kujdes\nKe një rol, një projekt apo një pyetje? Më trego pak për të. Do të më pëlqente të të dëgjoja.\nFatjeta Nerguti. Bërë me kujdes në Tiranë.",
+contact: "Email | fatjetanerguti8@gmail.com | mailto:fatjetanerguti8@gmail.com\nGitHub | GitHub | https://github.com/fatjetanerguti\nLinkedIn | LinkedIn | https://www.linkedin.com/in/fatjeta-nerguti"
+};
+const HINT = {
+hero: "Line by line: 1 first headline, 2 second (colored) headline, 3 your name and role, 4 short intro, 5 availability note, 6 three values separated by commas, 7 photo (a link or a file name like photo.jpg, optional).",
+about: "One paragraph per line.", stats: "One per line: Number | Label",
+skills: "Separate skills with commas.",
+projects: "One per line: Title | Description | Technologies | Year | Link | Photo (optional). Add as many projects as you like.",
+certs: "One per line: Name | Issuer | Date | Credential link | Photo (optional). Add as many as you like.",
+titles: "One per line: id | small label | first line | colored line. Keep the ids (about, projects, services, certificates, journey, contact) unchanged.",
+misc: "Line by line: 1 caption under the photo, 2 word on the right, 3 badge on the photo, 4 text above the contact form, 5 footer text.",
+services: "One per line: Title | Description | Item; Item; Item",
+experience: "One per line: Role | Company | Dates | Description",
+education: "One per line: Degree | School | Dates"
+,contact: "One per line: Label | Text | Link. The first line must be your email with a mailto: link."
+};
+const GRAD = ['#e3d4ff,#fbd5e6', '#fbd5e6,#ffe9d6', '#d8e3ff,#e3d4ff', '#f3d9ff,#ffd9e8'];
+
+const UI = {
+en: { nav_about: 'About', nav_work: 'Work', nav_cert: 'Certificates', nav_services: 'Services', nav_journey: 'Journey', nav_talk: "Let's talk ↗", explore: 'Explore my work ↗', aboutme: 'About me ↗', view: 'View project ↗', cred: 'View credential ↗', exp: 'Experience', edu: 'Education', up: 'Back to top ↑', f_title: 'Tell me what you are dreaming of.', f_name: 'Your name', f_email: 'Email address', f_about: 'What is this about?', f_o1: 'A job opportunity', f_o2: 'A project', f_o3: 'A question', f_msg: 'Your message', f_note: 'This opens your email app with the message ready to send.', f_send: 'Send message ↗', subj: 'Hello from ', lang: 'SQ' },
+sq: { nav_about: 'Rreth meje', nav_work: 'Punë', nav_cert: 'Certifikata', nav_services: 'Shërbime', nav_journey: 'Rrugëtimi', nav_talk: 'Të flasim ↗', explore: 'Shiko punën time ↗', aboutme: 'Rreth meje ↗', view: 'Shiko projektin ↗', cred: 'Shiko certifikatën ↗', exp: 'Përvoja', edu: 'Arsimi', up: 'Kthehu lart ↑', f_title: 'Më trego për çfarë ëndërron.', f_name: 'Emri yt', f_email: 'Adresa e email-it', f_about: 'Për çfarë është kjo?', f_o1: 'Një mundësi pune', f_o2: 'Një projekt', f_o3: 'Një pyetje', f_msg: 'Mesazhi yt', f_note: 'Kjo hap aplikacionin e emailit me mesazhin gati për dërgim.', f_send: 'Dërgo mesazhin ↗', subj: 'Përshëndetje nga ', lang: 'EN' }
+};
+let L = 'en';
+try { L = localStorage.getItem('lang') || (/^sq/i.test(navigator.language) ? 'sq' : 'en'); } catch (e) {}
+const tr = k => UI[L][k] || UI.en[k] || '';
+const g = k => (L === 'sq' && data[k + '_sq']) || data[k];
+const rowsL = k => {
+  const r = rows(g(k)); if (L === 'en') return r;
+  const e = rows(data[k]);
+  return r.map((x, i) => Array.from({ length: Math.max(x.length, (e[i] || []).length) }, (_, j) => x[j] || (e[i] || [])[j] || ''));
+};
+const $ = s => document.querySelector(s);
+const el = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; };
+const safe = u => /^(https?:|mailto:)/i.test(u || '') ? u : '#';
+const imgOk = u => /^(https?:\/\/\S+|[\w\-\/.]+\.(jpe?g|png|webp|avif))$/i.test(u || '');
+const lines = t => t.split('\n').map(l => l.trim()).filter(Boolean);
+const rows = t => lines(t).map(l => l.split('|').map(s => s.trim()));
+const sb = (SUPABASE_URL && SUPABASE_KEY && window.supabase) ? supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+let data = { ...DEF }, admin = false;
+
+function tools(parent, list) {
+  if (!admin) return;
+  const d = el('div', 'tools');
+  list.forEach(([k, l]) => { const b = el('button', 'edit', 'Edit ' + l); b.onclick = () => editor(k); d.append(b); });
+  parent.append(d);
+}
+let T = {};
+function sec(id) {
+  const r = T[id] || [], s = el('section', 'sec w'); s.id = id;
+  const h = el('div', 'sh'); h.append(el('p', 'eb', r[1] || ''));
+  const t = el('h2'); t.append((r[2] || '') + ' ', el('span', 'vi', r[3] || '')); h.append(t); s.append(h); return s;
+}
+function link(t, u) { const a = el('a', 0, t); a.href = safe(u); a.target = '_blank'; a.rel = 'noopener noreferrer'; return a; }
+
+function render() {
+  const A = $('#app'); A.replaceChildren(); T = {}; rows(g('titles')).forEach(r => T[r[0]] = r); const M = g('misc').split('\n').map(x => x.trim());
+  const h = g('hero').split('\n').map(x => x.trim());
+  /* hero */
+  const hero = el('section', 'hero w'); hero.id = 'top';
+  const L = el('div'), h1 = el('h1'); h1.append(h[0] || '', document.createElement('br'), el('span', 'vi', h[1] || ''));
+  const bt = el('div', 'btns'), b1 = el('a', 'btn', tr('explore')); b1.href = '#projects';
+  const b2 = el('a', 'lnk', tr('aboutme')); b2.href = '#about'; bt.append(b1, b2);
+  L.append(el('p', 'eyebrow', h[4] || ''), h1, el('p', 'role', h[2] || ''), el('p', 'lead', h[3] || ''), bt); tools(L, [['hero', 'intro'], ['titles', 'headings'], ['misc', 'small texts']]);
+  const F = el('figure'), arch = el('div', 'arch');
+  const ph = h[6] || (data['hero'].split('\n')[6] || '').trim(); if (imgOk(ph)) { const i = el('img'); i.src = ph; i.alt = 'Portrait of Fatjeta Nerguti'; arch.append(i); } else arch.textContent = 'FN';
+  const cap = el('figcaption'); cap.append(el('span', 0, M[0] || ''), el('i', 0, M[1] || ''));
+  F.append(arch, el('span', 'tag', M[2] || ''), cap); hero.append(L, F); A.append(hero);
+  const st = el('div', 'strip w'); (h[5] || '').split(',').forEach(v => st.append(el('span', 0, v.trim()))); A.append(st);
+  /* about */
+  const ab = sec('about');
+  const two = el('div', 'two'), pl = el('div'), win = el('div', 'win'), dots = el('div', 'd');
+  dots.append(el('i'), el('i'), el('i')); win.append(dots);
+  [92, 70, 84, 46, 78, 60].forEach(w => { const b = el('div', 'b'); b.style.width = w + '%'; win.append(b); });
+  pl.append(win, el('p', 'cap', 'Where the ideas become code'));
+  const tx = el('div', 'txt'); lines(g('about')).forEach(p => tx.append(el('p', 0, p)));
+  const ch = el('div', 'chips'); g('skills').split(',').map(s => s.trim()).filter(Boolean).forEach(s => ch.append(el('span', 'chip', s)));
+  const sts = el('div', 'stats'); rows(g('stats')).forEach(([n, l]) => { const d = el('div'); d.append(el('b', 0, n), el('span', 0, l || '')); sts.append(d); });
+  tx.append(ch, sts); tools(tx, [['about', 'text'], ['skills', 'skills'], ['stats', 'numbers']]); two.append(pl, tx);
+  ab.append(two); A.append(ab);
+  /* projects */
+  const pr = sec('projects'), pl2 = el('div', 'plist');
+  rowsL('projects').forEach(([t, d, tg, y, u, im], i) => {
+    const c = el('article', 'pcard'), v = el('div', 'pv');
+    if (imgOk(im)) { const x = el('img'); x.src = im; x.alt = t; x.loading = 'lazy'; v.append(x); } else { v.textContent = (t || '?')[0]; v.style.background = 'linear-gradient(145deg,' + GRAD[i % 4] + ')'; v.style.display = 'grid'; v.style.placeItems = 'center'; v.style.color = 'rgba(93,58,142,.55)'; v.style.fontFamily = "'Cormorant Garamond',serif"; }
+    const b = el('div', 'pb'), m = el('div', 'pm'); m.append(el('span', 0, tg || ''), el('span', 0, y || ''));
+    b.append(m, el('h3', 0, t), el('p', 'd', d || ''));
+    if (u) { const a = link(tr('view'), u); a.className = 'lnk2'; b.append(a); }
+    c.append(v, b); pl2.append(c);
+  });
+  pr.append(pl2); tools(pr, [['projects', 'projects']]); A.append(pr);
+  /* services */
+  const sv = el('div', 'band'), sw = el('div', 'w'), ss = sec('services'), sg = el('div', 'sgrid');
+  ss.style.padding = 0; ss.classList.remove('w');
+  rows(g('services')).forEach(([t, d, it], i) => {
+    const c = el('div', 'card'), ul = el('ul'); (it || '').split(';').forEach(x => ul.append(el('li', 0, x.trim())));
+    c.append(el('span', 'n', '0' + (i + 1)), el('h3', 0, t), el('p', 0, d || ''), ul); sg.append(c);
+  });
+  ss.append(sg); tools(ss, [['services', 'services']]); sw.append(ss); sv.append(sw); A.append(sv);
+  /* certificates */
+  const cs = sec('certificates'), cg = el('div', 'cgrid');
+  rowsL('certs').forEach(([n, is, dt, u, im]) => {
+    const c = el('div', 'card cert');
+    if (imgOk(im)) { const x = el('img'); x.src = im; x.alt = n; x.loading = 'lazy'; c.append(x); }
+    c.append(el('h3', 0, n), el('p', 0, [is, dt].filter(Boolean).join(' · ')));
+    if (u) { const a = link(tr('cred'), u); a.className = 'lnk2'; c.append(a); }
+    cg.append(c);
+  });
+  cs.append(cg); tools(cs, [['certs', 'certificates']]); A.append(cs);
+  /* journey */
+  const jn = sec('journey'), jg = el('div', 'jgrid');
+  const c1 = el('div', 'card'), c2 = el('div', 'card');
+  c1.append(el('h3', 0, tr('exp'))); c2.append(el('h3', 0, tr('edu')));
+  rows(g('experience')).forEach(([r, co, dt, d]) => { const i = el('div', 'it'), s = el('small', 0, [co, dt].filter(Boolean).join(' · ')); i.append(el('b', 0, r), s, el('p', 0, d || '')); c1.append(i); });
+  rows(g('education')).forEach(([r, sc, dt]) => { const i = el('div', 'it'), s = el('small', 0, [sc, dt].filter(Boolean).join(' · ')); i.append(el('b', 0, r), s); c2.append(i); });
+  jg.append(c1, c2); jn.append(jg); tools(jn, [['experience', 'experience'], ['education', 'education']]); A.append(jn);
+  /* contact */
+  const ct = el('div', 'contact'), cw = el('div', 'w two'), cl = el('div'), cr = rowsL('contact'), mail = (cr[0] || [])[2] || '';
+  ct.id = 'contact'; const ch2 = el('h2', 'serif'); ch2.style.cssText = 'font-size:clamp(2.4rem,5.5vw,4rem)'; ch2.append(((T.contact || [])[2] || '') + ' ', el('span', 'vi', (T.contact || [])[3] || ''));
+  const lead = el('p', 'lead', M[3] || '');
+  const m = link((cr[0] || [])[1] || '', mail); m.className = 'mail'; const so = el('div', 'soc'); cr.slice(1).forEach(r => so.append(link(r[1] + ' ↗', r[2])));
+  cl.append(el('p', 'eb', (T.contact || [])[1] || ''), ch2, lead, m, so); tools(cl, [['contact', 'contact']]);
+  const f = el('form'); f.innerHTML = '<h3>' + tr('f_title') + '</h3><label for="fn">' + tr('f_name') + '</label><input id="fn" required><label for="fe">' + tr('f_email') + '</label><input id="fe" type="email" required><label for="fs">' + tr('f_about') + '</label><select id="fs"><option>' + tr('f_o1') + '</option><option>' + tr('f_o2') + '</option><option>' + tr('f_o3') + '</option></select><label for="fm">' + tr('f_msg') + '</label><textarea id="fm" required></textarea><p class="small">' + tr('f_note') + '</p>';
+  const send = el('button', 0, tr('f_send')); send.type = 'submit'; send.style.marginTop = '14px'; f.append(send);
+  f.onsubmit = e => {
+    e.preventDefault(); const to = mail.replace(/^mailto:/i, ''); if (!/^[^\s?&]+@[^\s?&]+$/.test(to)) return;
+    location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(tr('subj') + $('#fn').value) + '&body=' + encodeURIComponent($('#fm').value + '\n\n' + $('#fn').value + ' (' + $('#fe').value + ')\n' + $('#fs').value);
+  };
+  cw.append(cl, f); ct.append(cw); A.append(ct);
+  $('#loginBtn').textContent = admin ? 'Log out' : '•'; $('#loginBtn').classList.toggle('on', admin); document.documentElement.lang = L; $('#lang').textContent = tr('lang'); $('#lang').title = L === 'en' ? 'Shqip' : 'English'; document.querySelectorAll('[data-i]').forEach(e => e.textContent = tr(e.dataset.i)); $('#bar').textContent = admin ? 'Edit mode is on' : ''; $('#fl').textContent = M[4] || '';
+}
+
+function editor(k) {
+  const d = $('#dlg'); d.replaceChildren();
+  const kk = k + (L === 'sq' ? '_sq' : ''); const ta = el('textarea'); ta.value = data[kk] ?? data[k]; ta.id = 'ta';
+  const msg = el('p', 'msg'), save = el('button', 0, 'Save changes'), cancel = el('button', 'alt', 'Cancel');
+  cancel.onclick = () => d.close();
+  save.onclick = async () => {
+    msg.textContent = '';
+    const { error } = await sb.from('content').upsert({ key: kk, value: { text: ta.value }, updated_at: new Date().toISOString() });
+    if (error) { msg.textContent = 'Could not save: ' + error.message; return; }
+    data[kk] = ta.value; render(); d.close();
+  };
+  const r = el('div', 'row'); r.append(cancel, save);
+  const lb = el('label', 0, 'Edit ' + k + (L === 'sq' ? ' (Shqip)' : ' (English)')); lb.htmlFor = 'ta';
+  const bx = el('div');
+  if (['projects', 'certs', 'hero'].includes(k)) {
+    const l = el('label', 0, 'Upload a photo (first click in the text where the link should go)'); l.htmlFor = 'up';
+    const up = el('input'); up.type = 'file'; up.id = 'up'; up.accept = 'image/jpeg,image/png,image/webp';
+    up.onchange = async () => {
+      const f = up.files[0]; if (!f) return;
+      if (f.size > 3e6) { msg.textContent = 'This image is larger than 3 MB. Choose a smaller one.'; return; }
+      const nm = Date.now() + '-' + f.name.replace(/[^\w.\-]/g, '_');
+      const { error } = await sb.storage.from('images').upload(nm, f, { contentType: f.type });
+      if (error) { msg.textContent = 'Upload failed: ' + error.message; return; }
+      const u = sb.storage.from('images').getPublicUrl(nm).data.publicUrl;
+      ta.setRangeText(u, ta.selectionStart, ta.selectionEnd, 'end'); ta.focus(); msg.textContent = 'Photo link added at your cursor. Press Save changes.';
+    };
+    bx.append(l, up);
+  }
+  d.append(el('h3', 0, 'Edit section'), lb, ta, el('p', 'hint', HINT[k] + (L === 'sq' ? ' In Shqip, you can leave links and photos empty: the English ones are used.' : '')), bx, msg, r); d.showModal();
+}
+
+function loginDialog() {
+  const d = $('#dlg'); d.replaceChildren();
+  const e = el('input'), p = el('input'), msg = el('p', 'msg');
+  e.type = 'email'; e.id = 'em'; e.autocomplete = 'username'; p.type = 'password'; p.id = 'pw'; p.autocomplete = 'current-password';
+  const go = el('button', 0, 'Log in'), cancel = el('button', 'alt', 'Cancel');
+  cancel.onclick = () => d.close();
+  go.onclick = async () => {
+    if (!sb) { msg.textContent = 'Add your Supabase URL and key in index.html first.'; return; }
+    const { error } = await sb.auth.signInWithPassword({ email: e.value, password: p.value });
+    if (error) { msg.textContent = 'Wrong email or password.'; return; }
+    d.close();
+  };
+  const l1 = el('label', 0, 'Email'); l1.htmlFor = 'em'; const l2 = el('label', 0, 'Password'); l2.htmlFor = 'pw';
+  const r = el('div', 'row'); r.append(cancel, go);
+  d.append(el('h3', 0, 'Admin login'), l1, e, l2, p, msg, r); d.showModal();
+}
+
+$('#loginBtn').onclick = async () => { if (admin) await sb.auth.signOut(); else loginDialog(); };
+$('#lang').onclick = () => { L = L === 'en' ? 'sq' : 'en'; try { localStorage.setItem('lang', L); } catch (e) {} render(); };
+$('#yr').textContent = new Date().getFullYear();
+
+(async () => {
+  if (sb) {
+    try {
+      const { data: rowsDb } = await sb.from('content').select('key,value');
+      (rowsDb || []).forEach(r => { if (r.value && typeof r.value.text === 'string') data[r.key] = r.value.text; });
+    } catch (e) { /* keep defaults */ }
+    const { data: s } = await sb.auth.getSession(); admin = !!s.session;
+    sb.auth.onAuthStateChange((_e, sess) => { admin = !!sess; render(); });
+  }
+  render();
+  if (location.hash === '#admin') loginDialog();
+})();
+</script>
+</body>
+</html>
